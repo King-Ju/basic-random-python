@@ -1,0 +1,40 @@
+from random import randint
+
+def genNumberCode(lenNumber):
+    code=''
+    for _ in range(lenNumber):
+        code+= str(randint(0,9))
+    return code
+
+print(genNumberCode(3))
+
+def genName(lenstr,upper=False):
+    listchar = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    strname=""
+    for _ in range(lenstr):
+        strname+=listchar[randint(0,len(listchar)-1)]
+    print(type(strname))
+    if(upper):
+        strname =  strname.capitalize()
+    return strname
+
+print(genName(5))
+
+def ranItem(yourlist):
+    return yourlist[randint(0,len(yourlist)-1)]
+
+testlist = [ 'Apple','Apricots','Avocado','Banana','Blackberries']
+
+print(ranItem(testlist))
+
+def ranNumberStr(lenstr):
+    listchar = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    strreturn=''
+    for _ in range(lenstr):
+        strreturn+=listchar[randint(0,len(listchar)-1)]
+        strreturn+=str(randint(0,9))
+    return strreturn
+
+print(ranNumberStr(5))
+
+
